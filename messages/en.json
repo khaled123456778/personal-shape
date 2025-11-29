@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "personalShape": "Personal Shape"
+  },
+  "hero": {
+    "title": "Creative Designer",
+    "subtitle": "Transforming Ideas Into Beautiful Experiences",
+    "description": "I craft digital experiences that captivate, engage, and inspire through thoughtful design and innovative solutions",
+    "cta": "Explore My Work"
+  },
+  "about": {
+    "heading": "About Me",
+    "lead": "Passionate about creating meaningful digital experiences",
+    "description": [
+      "With over 5 years of experience in digital design, I specialize in creating user-centered solutions that bridge the gap between functionality and aesthetics. My approach combines strategic thinking with creative execution to deliver impactful results.",
+      "I believe that great design is not just about how it looks, but how it works and how it makes people feel. Every project is an opportunity to solve problems and create connections that matter.",
+      "When I'm not designing, you'll find me exploring new technologies, sketching ideas, or seeking inspiration in nature and architecture."
+    ],
+    "skills": [
+      "UI/UX Design",
+      "Web Development",
+      "Brand Identity",
+      "Motion Graphics",
+      "Prototyping",
+      "Design Systems"
+    ]
+  },
+  "featuredWork": {
+    "heading": "Featured Work",
+    "ecommerce": {
+      "title": "E-commerce Platform",
+      "desc": "A modern, responsive e-commerce solution with focus on user experience and conversion optimization. Built with scalability and performance in mind.",
+      "tech": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Stripe"
+      ]
+    },
+    "brandIdentity": {
+      "title": "Brand Identity System",
+      "desc": "Complete visual identity redesign for a tech startup, including logo, guidelines, and digital assets. Creating a cohesive brand experience across all touchpoints.",
+      "tech": [
+        "Illustrator",
+        "Photoshop",
+        "Figma",
+        "After Effects"
+      ]
+    },
+    "mobileApp": {
+      "title": "Mobile App Design",
+      "desc": "Intuitive mobile app interface for a fitness tracking application with focus on accessibility and user engagement through gamification.",
+      "tech": [
+        "Figma",
+        "Principle",
+        "React Native",
+        "Lottie"
+      ]
+    },
+    "dashboard": {
+      "title": "Dashboard Interface",
+      "desc": "Clean and functional dashboard design for data analytics platform with complex information architecture and real-time data visualization.",
+      "tech": [
+        "Vue.js",
+        "D3.js",
+        "SCSS",
+        "Chart.js"
+      ]
+    },
+    "marketing": {
+      "title": "Marketing Website",
+      "desc": "Modern marketing website with interactive animations and optimized conversion funnels. Built for maximum performance and SEO.",
+      "tech": [
+        "Next.js",
+        "Framer Motion",
+        "Tailwind CSS",
+        "Vercel"
+      ]
+    },
+    "portfolio": {
+      "title": "Creative Portfolio",
+      "desc": "Artistic portfolio website featuring immersive galleries, smooth transitions, and creative storytelling for a digital artist.",
+      "tech": [
+        "React",
+        "Three.js",
+        "GSAP",
+        "WebGL"
+      ]
+    }
+  },
+  "contact": {
+    "heading": "Let's Work Together",
+    "lead": "Ready to bring your vision to life? Let's discuss how we can create something amazing together.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "enter your name",
+      "email": "Email",
+      "emailPlaceholder": "enter your email",
+      "subject": "Subject",
+      "subjectPlaceholder": "enter subject",
+      "message": "Message",
+      "messagePlaceholder": "write your message",
+      "send": "Send Message"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Personal Shape. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "sitemap": "Sitemap",
+    "providedBy": "Provided by TemplateMo"
+  },
+  "lang": {
+    "ar": "AR",
+    "en": "EN"
+  }
+}
