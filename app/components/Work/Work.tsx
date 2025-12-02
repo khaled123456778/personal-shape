@@ -1,66 +1,17 @@
 "use client"
 import React from 'react'
 import HeaderFadeUp from '../HeaderFadeUp/HeaderFadeUp'
-import img1 from "@/public/images/computer-desk-stickers.jpg"
-import img2 from "@/public/images/curved-display-pinky-girl.jpg"
-import img3 from "@/public/images/dashboard-interfaces-transparent-displays.jpg"
-import img4 from "@/public/images/marketing-strategy-women.jpg"
-import img5 from "@/public/images/portfolio-website-girl.jpg"
-import img6 from "@/public/images/working-business-women.jpg"
-import Image from 'next/image'
 import { delay, easeInOut, motion, Variants } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { projects } from '../../data/projects';
+import { Link } from '../../../i18n/navigation';
 
 export default function Work() {
   const t = useTranslations("featuredWork");
 
-  // card array
-  // card array
-  const cardsData = [
-    {
-      title: t('ecommerce.title'),
-      description: t('ecommerce.desc'),
-      tools: t.raw('ecommerce.tech') as string[],
-      image: img1,
-      addGhostTag: true,
-    },
-    {
-      title: t('brandIdentity.title'),
-      description: t('brandIdentity.desc'),
-      tools: t.raw('brandIdentity.tech') as string[],
-      image: img2,
-      addGhostTag: false,
-    },
-    {
-      title: t('mobileApp.title'),
-      description: t('mobileApp.desc'),
-      tools: t.raw('mobileApp.tech') as string[],
-      image: img3,
-      addGhostTag: true,
-    },
-    {
-      title: t('dashboard.title'),
-      description: t('dashboard.desc'),
-      tools: t.raw('dashboard.tech') as string[],
-      image: img4,
-      addGhostTag: true,
-    },
-    {
-      title: t('marketing.title'),
-      description: t('marketing.desc'),
-      tools: t.raw('marketing.tech') as string[],
-      image: img5,
-      addGhostTag: false,
-    },
-    {
-      title: t('portfolio.title'),
-      description: t('portfolio.desc'),
-      tools: t.raw('portfolio.tech') as string[],
-      image: img6,
-      addGhostTag: true,
-    },
-  ];
+
 
   // motion variants
   const staggerCards = {
@@ -110,7 +61,7 @@ export default function Work() {
 
       >
 
-        {cardsData.map((card, index) => (
+        {projects.map((project, index) => (
           <motion.div
             key={index}
             variants={cardFadeUp}
@@ -120,90 +71,92 @@ export default function Work() {
      transform-gpu will-change-transform
     "
           >
-            <motion.div className="card-img relative h-[180] overflow-hidden rounded-t-3xl ">
-              <Image src={card.image} alt={card.title}
-                fill
-                sizes='100vw'
-                className="object-cover"
-                placeholder='blur'
-                loading='eager'
-              />
+            <Link href={`/projects/${project.id}`} className="flex flex-col h-full">
+              <motion.div className="card-img relative h-[180] overflow-hidden rounded-t-3xl ">
+                <Image src={project.image} alt={t(`${project.id}.title`)}
+                  fill
+                  sizes='100vw'
+                  className="object-cover"
+                  placeholder='blur'
+                  loading='eager'
+                />
 
-              {/* overlay */}
-              <div className="
-    absolute inset-0 
-    layer-bg
-    opacity-0
-    group-hover:opacity-100
-    transition-all duration-300
-  "></div>
-            </motion.div>
+                {/* overlay */}
+                <div className="
+      absolute inset-0 
+      layer-bg
+      opacity-0
+      group-hover:opacity-100
+      transition-all duration-300
+    "></div>
+              </motion.div>
 
-            <div className="card-body 
-        p-[32]  
-     rounded-b-3xl
-shadow-xl  
- flex flex-col  
-                 
+              <div className="card-body 
+          p-[32]  
+       rounded-b-3xl
+  shadow-xl  
+   flex flex-col  
+   flex-grow            
+  
+   ">
 
- ">
-
-              <h3 className="card-title 
-                 text-[24px]
-                 font-semibold
-                 mb-[16px]
-                 ">{card.title}</h3>
-              <div className="description-container  h-[120]        ">
-                <p
-                  className="
-      text-[16px]
-      text-[var(--text-secondary)]
-      line-clamp-4
-      mb-[24]
-      
-     
-    "
-                >
-                  {card.description}
-                </p>
-
-
-              </div>
-
-
-              <div className=" tags-cintainer relative    h-[80]    ">
-                <div className="tags 
-        flex flex-wrap 
+                <h3 className="card-title 
+                   text-[24px]
+                   font-semibold
+                   mb-[16px]
+                   ">{t(`${project.id}.title`)}</h3>
+                <div className="description-container  h-[120]        ">
+                  <p
+                    className="
+        text-[16px]
+        text-[var(--text-secondary)]
+        line-clamp-4
+        mb-[24]
         
-        gap-2
-     
-         
        
-        
-        ">
-                  {card.tools.map((tool, index) => (
-                    <span
-                      key={index}
-                      className="px-4 py-1.5
-       bg-[var(--bg-secondary)]
-       hover:bg-[var(--primary-color)]
-       transition-colors duration-100
-       text-[var(--text-secondary)] 
-        hover:text-white
-       rounded-full
-        text-sm font-medium
-       
-        "
+      "
+                  >
+                    {t(`${project.id}.desc`)}
+                  </p>
 
-                    >
-                      {tool}
-                    </span>
-                  ))}
 
                 </div>
-              </div>
 
-            </div>
+
+                <div className=" tags-cintainer relative    h-[80]    ">
+                  <div className="tags 
+          flex flex-wrap 
+          
+          gap-2
+       
+           
+         
+          
+          ">
+                    {(t.raw(`${project.id}.tech`) as string[]).map((tool, index) => (
+                      <span
+                        key={index}
+                        className="px-4 py-1.5
+         bg-[var(--bg-secondary)]
+         hover:bg-[var(--primary-color)]
+         transition-colors duration-100
+         text-[var(--text-secondary)] 
+          hover:text-white
+         rounded-full
+          text-sm font-medium
+         
+          "
+
+                      >
+                        {tool}
+                      </span>
+                    ))}
+
+                  </div>
+                </div>
+
+              </div>
+            </Link>
           </motion.div>
         ))}
       </motion.div>

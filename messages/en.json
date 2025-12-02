@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "portfolio": "Portfolio",
+    "work": "Work",
     "contact": "Contact",
     "personalShape": "Personal Shape"
   },
@@ -81,7 +81,7 @@
         "Vercel"
       ]
     },
-    "portfolio": {
+    "work": {
       "title": "Creative Portfolio",
       "desc": "Artistic portfolio website featuring immersive galleries, smooth transitions, and creative storytelling for a digital artist.",
       "tech": [
@@ -90,6 +90,19 @@
         "GSAP",
         "WebGL"
       ]
+    }
+  },
+  "projectDetails": {
+    "keyHighlights": "Key Highlights",
+    "technologies": "Technologies",
+    "viewLive": "View Live Project",
+    "prev": "Prev",
+    "next": "Next",
+    "features": {
+      "responsive": "Responsive Design",
+      "performance": "Performance Optimized",
+      "userCentric": "User-Centric UI",
+      "modernArch": "Modern Architecture"
     }
   },
   "contact": {

@@ -35,7 +35,7 @@ export default function Navbar() {
   const navLinks = [
     { id: "home", label: t('home'), href: "#home" },
     { id: "about", label: t('about'), href: "#about" }, // ← صحح من 'about' إلى t('about')
-    { id: "portfolio", label: t('portfolio'), href: "#portfolio" }, // ← صحح
+    { id: "work", label: t('work'), href: "#work" }, // ← صحح
     { id: "contact", label: t('contact'), href: "#contact" } // ← صحح
   ];
 

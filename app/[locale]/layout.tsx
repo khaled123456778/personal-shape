@@ -20,11 +20,13 @@ export default async function LocaleLayout({ children, params }: Props) {
     messages = {};
   }
 
+  const direction = locale === 'ar' ? 'rtl' : 'ltr';
+
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} dir={direction} suppressHydrationWarning>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
+          
           {children}
         </NextIntlClientProvider>
       </body>

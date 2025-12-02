@@ -5,12 +5,14 @@ import About from "../components/About/About";
 import Work from "../components/Work/Work";
 import Form from "../components/Form/Form";
 import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Navbar/Navbar";
 
 
 export default function Home() {
  return<>
 
 <div className="">
+  <Navbar />
    <div id="home" className="scroll-mt-20">
      <Hero/>
    </div>
@@ -20,7 +22,7 @@ export default function Home() {
     ">
         <About />
 
-        <div id="portfolio" className="scroll-mt-30">
+        <div id="work" className="scroll-mt-30">
         <Work />
       </div>
       
