@@ -224,6 +224,7 @@ text-[2.5rem] font-medium
       </div>
       {/* nav-links */}
       <ul className='
+      nav-links
  gap-10
   text-black
   max-[820px]:hidden
